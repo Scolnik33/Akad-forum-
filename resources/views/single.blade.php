@@ -20,11 +20,11 @@
 					<div class="single_post">
 						@if($post['image'])
 							<div class="post_media">
-								<img src="{{ asset('storage/' . $post['image'])}}" alt="post image" style="width: 850px; height: 500px">
+								<img class="single_img" src="{{ asset('storage/' . $post['image'])}}" alt="post image">
 							</div>
 						@endif
 						<div class="post_title">
-							<div style="display: flex; justify-content: space-between; align-items: center">
+							<div class="post_container">
 								<h4 class="montserrat-text uppercase">{{ $post['name'] }}</h4>
 								@if ($post['userId'] == Auth::id() || Auth::user()?->role == 'admin')
 									<div class="btn_group" style="display: flex; justify-content: space-between; align-items: center">

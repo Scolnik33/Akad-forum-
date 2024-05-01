@@ -25,9 +25,9 @@
                     <a href="{{ route('single', $item['id'])}} " class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
                         <div class="team_member">
                             @if($item['image'])
-                                <img src="{{ asset('storage/' . $item['image']) }}" alt="image" style="width: 263px; height: 332px">
+                                <img class="bytag_img" src="{{ asset('storage/' . $item['image']) }}" alt="image">
                             @else
-                                <img src="{{ asset('img/team.jpg') }}" alt="image" style="width: 263px; height: 332px">
+                                <img class="bytag_img" src="{{ asset('img/team.jpg') }}" alt="image">
                             @endif
                             <div class="team_member_hover">
                                 <div class="team_member_info">

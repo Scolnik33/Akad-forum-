@@ -165,12 +165,12 @@
 			<div class="col-md-9">
 				<div class="row portfolio_container">
 					@foreach($posts as $item)
-						<div class="col-md-4 post">
+						<div class="col-md-4 col-sm-6 post">
 							<a href="{{ route('single', $item['id']) }}" class="portfolio_item work-grid wow fadeInUp">
 								@if ($item['image'])
-									<img src="{{ asset('storage/' . $item['image']) }}" alt="image" style="width: 255px; height: 146px">
+									<img class="portfolio_img" src="{{ asset('storage/' . $item['image']) }}" alt="image">
 								@else
-									<img src="{{ asset('img/work-1.jpg')}}" alt="image" style="width: 255px; height: 146px">
+									<img class="portfolio_img" src="{{ asset('img/work-1.jpg')}}" alt="image">
 								@endif
 								<div class="portfolio_item_hover">
 									<div class="item_info">
