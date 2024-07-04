@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 // Page
 
-Route::get('/home', [PageController::class, 'home'])->name('home');
+Route::get('/', [PageController::class, 'home'])->name('home');
 
 Route::get('/servises', [PageController::class, 'servises'])->name('servises');
 

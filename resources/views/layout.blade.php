@@ -19,14 +19,16 @@
 	<header class="main-header">
 		<div class="container">
 			<div class="logo">
-				<a href="/home"><img src="{{ asset('img/logo.png')}}" alt="logo"></a>
+				<a href="/"><img src="{{ asset('img/logo.png')}}" alt="logo"></a>
 			</div>
 
 			<div class="menu">
 				<nav class="desktop-nav">
 					<ul class="first-level">
 						<li><a href="{{ route('home') }}" class="animsition-link">Home</a></li>
-						<li><a href="{{ route('profile', Auth::id()) }}" class="animsition-link">profile</a></li>
+						@if(Auth::id())
+							<li><a href="{{ route('profile', Auth::id()) }}" class="animsition-link">profile</a></li>
+						@endif
 						<li><a href="{{ route('servises') }}" class="animsition-link">services</a></li>
 						<li><a href="{{ route('topost') }}" class="animsition-link">to post</a></li>
 						{{-- @if (Auth::user()?->role == 'admin')

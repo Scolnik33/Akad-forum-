@@ -9,7 +9,7 @@ class PageController extends BaseController
     public function home(Request $request) {
         $posts = $this->pageService->home($request);
 
-        return view('home', ['posts' => $posts]);
+        return view('/home', ['posts' => $posts]);
     }
 
     public function profile($id) {

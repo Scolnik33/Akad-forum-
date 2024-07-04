@@ -14,7 +14,7 @@ class UserController extends BaseController
 
         $this->userService->signUp($request);
 
-        return redirect('home');
+        return redirect(route('home'));
     }
 
     public function signIn(SigninRequest $request) {
@@ -22,7 +22,7 @@ class UserController extends BaseController
 
         $this->userService->signIn($request);
         
-        return redirect('home');
+        return redirect(route('home'));
     }
 
     public function toupdateprofile(UpdateProfileRequest $request, $id) {
@@ -30,7 +30,7 @@ class UserController extends BaseController
 
         $this->userService->toupdateprofile($request, $id);
 
-        return redirect('profile/' . $id);
+        return redirect(route('profile', $id));
     }
 
     public function logout() {
@@ -38,6 +38,6 @@ class UserController extends BaseController
 
         session()->flash('success', 'Выход из аккаунта успешно выполнен.');
 
-        return redirect('home');
+        return redirect(route('home'));
     }
 }

@@ -12,7 +12,7 @@ class PostController extends BaseController
         
         $this->postService->topost($request);
 
-        return redirect('home');
+        return redirect(route('home'));
     }
 
     public function toupdate(UpdatePostRequest $request, $id) {
@@ -20,12 +20,12 @@ class PostController extends BaseController
 
         $this->postService->toupdate($request, $id);
 
-        return redirect('single/' . $id);
+        return redirect(route('single', $id));
     }
 
     public function todelete($id) {
         $this->postService->todelete($id);
 
-        return redirect('home');
+        return redirect(route('home'));
     }
 }

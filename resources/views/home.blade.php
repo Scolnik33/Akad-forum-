@@ -143,7 +143,7 @@
 					<span class="montserrat-text uppercase">choose category</span>
 
 					<nav class="categories">
-						<form action="/home" method="get">
+						<form action="/" method="get">
 							<ul class="portfolio_filter">
 								<div style="display: none">
 									@if(!empty($_SERVER['QUERY_STRING']))
@@ -175,6 +175,7 @@
 								<div class="portfolio_item_hover">
 									<div class="item_info">
 										<span style="margin-bottom: 10px">{{ Str::limit($item['name'], 20) }}</span>
+										<br>
 										<em>{{ Str::limit($item['text'], 30) }}</em>
 									</div>
 								</div>
@@ -187,4 +188,5 @@
 		</div>
 	</section>
 	<script src="{{ asset('js/filter.js') }}"></script>
+	<script src="{{ asset('js/scroll.js')}}"></script>
 @endsection
