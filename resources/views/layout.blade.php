@@ -70,12 +70,12 @@
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua.
 						</p>
-						<form action="#" method="post">
+						<form action="/" method="get">
 							<div class="input_1">
-								<input type="text" name="email">
+								<input type="text">
 								<span>your email</span>
 							</div>
-							<button type="submit" class="btn green" style="margin-top:20px"><span>send</span></button>
+							<button class="btn green" style="margin-top:20px"><span>send</span></button>
 						</form>
 					</div>
 				</div>
