@@ -31,9 +31,6 @@
 						@endif
 						<li><a href="{{ route('servises') }}" class="animsition-link">services</a></li>
 						<li><a href="{{ route('topost') }}" class="animsition-link">to post</a></li>
-						{{-- @if (Auth::user()?->role == 'admin')
-							<li><a href="{{ route('admin')}} " class="animsition-link">admin</a></li>
-						@endif --}}
 						@if (Auth::check())
 							<li><a href="{{ route('logout')}} " class="animsition-link">logout</a></li>
 						@else
